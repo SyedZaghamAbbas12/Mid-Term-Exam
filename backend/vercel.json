@@ -1,20 +1,9 @@
 {
   "version": 2,
-  "name": "coffee-shop",
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
+    { "src": "server.js.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
-    }
-  ],
-  "env": {
-    "MONGO_URI": "@mongo_uri",
-    "NODE_ENV": "production"
-  }
+    { "src": "/(.*)", "dest": "/server.js" }
+  ]
 }
